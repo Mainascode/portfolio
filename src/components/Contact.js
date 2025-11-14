@@ -39,12 +39,15 @@ export default function ContactPage() {
           Connect.
         </p>
 
-<a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=mainaemmanuel855@gmail.com"
-  target="_blank"
->
-  Email Me (Gmail)
-</a>
+        <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mainaemmanuel855@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition text-lg shadow-md hover:shadow-lg"
+        >
+          <Mail size={22} />
+          Email Me
+        </a>
 
         {/* Divider */}
         <div className="my-10 border-t border-gray-200 dark:border-gray-700"></div>
