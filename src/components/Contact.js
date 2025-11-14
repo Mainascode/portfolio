@@ -36,7 +36,7 @@ export default function ContactPage() {
         <h3 className="text-2xl font-semibold mb-3">Send me an email</h3>
 
         <p className="text-gray-500 dark:text-gray-400 mb-6">
-          I usually respond within a few hours.
+          Connect.
         </p>
 
         <a
