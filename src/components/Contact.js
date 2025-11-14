@@ -33,7 +33,7 @@ export default function ContactPage() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-2xl font-semibold mb-3">Send me an email</h3>
+        <h3 className="text-2xl font-semibold mb-3">Let's work together!</h3>
 
         <p className="text-gray-500 dark:text-gray-400 mb-6">
           Connect.
