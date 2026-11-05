@@ -1,0 +1,10 @@
+import { Arrow, Check, Heading } from '../components/Icons'
+const projects = [
+  { color: 'blush', title: 'Tiketi-Tamasha — Event Ticketing', desc: 'Event ticketing system with registration, booking, and payment integration.', points: ['Event filtering, booking flow & secure payments', 'User authentication and backend logic'], stack: ['React', 'Python', 'SQLAlchemy'], href: 'https://euphonious-cupcake-bdec30.netlify.app/' },
+  { color: 'lilac', title: 'Content Guru — E-Learning Marketplace', desc: 'Course & book marketplace with secure checkout and modular design.', points: ['Cart, checkout & dynamic course listings', 'Frontend state management & backend structuring'], stack: ['React', 'Python', 'SQLAlchemy'], href: 'https://content-guru-6jvp.vercel.app/' },
+  { color: 'mint', title: 'Delivery App', desc: 'A live web application built around a simple delivery experience.', points: ['Delivery-focused interface and user flow', 'Deployed and available to explore online'], stack: [], href: 'https://delivery-one-smoky.vercel.app/' },
+]
+function ProjectCard({ project }) {
+  return <article className="proj-card"><div className={`proj-banner pb-${project.color}`}/><div className="proj-body"><div className="proj-top"><span className={`proj-role pr-${project.color}`}>{project.title === 'Delivery App' ? 'Web App' : 'Personal Project'}</span></div><h3>{project.title}</h3><p>{project.desc}</p>{project.points.length > 0 && <ul className="proj-list">{project.points.map(point => <li key={point}><Check/>{point}</li>)}</ul>}<div className="proj-foot"><div className="stack-chips">{project.stack.map(item => <span className="chip" key={item}>{item}</span>)}</div><a className="live-link" href={project.href} target="_blank" rel="noreferrer">Open<Arrow/></a></div></div></article>
+}
+export default function WorkPage() { return <section><Heading title="Featured work" kicker="Shipped"/><div className="proj">{projects.map(project => <ProjectCard key={project.title} project={project}/>)}</div></section> }
